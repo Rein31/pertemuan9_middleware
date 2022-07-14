@@ -9,9 +9,12 @@ const port = 3000;
 // information using ejs
 app.set('view engine', 'ejs')
 
+// use express layout
 app.use(expressLayouts);
+// set default layout for all routing
 app.set('layout', 'layouts/main');
 
+// use express static for public folder
 app.use(express.static('public'))
 
 app.use((req, res, next) => {
